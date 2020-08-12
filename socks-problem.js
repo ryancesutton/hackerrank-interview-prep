@@ -3,13 +3,13 @@
 
 // Complete the sockMerchant function below.
 function sockMerchant(n, ar) {
-    let res = 0;
+    let pairs = 0;
     ar.sort();
     for(let i = 0; i < n; i++){
-        if(ar[i] == ar[i+1]){
+        if(ar[i] == ar[i + 1]){
             i++;
-            res++;
+            pairs++;
         }
     }
-    return res;
+    return pairs;
 }
