@@ -1,15 +1,16 @@
 function repeatedString(s, n) {
+    let c = 0,
+        ca = 0,
+        r = n % s.length
 
-    let count = 0;
+    for (let i = s.length; i-- > 0;) {
+        if (s.charAt(i) == 'a') {
+            ++c
 
-    for (let i = 0; i <= n; i++) {
-
-        if (s[i] === 'a') {
-            count++
-            {
-                return count;
-            }
-
+            if (i < r)
+                ++ca
         }
     }
+
+    return ((n - r) / s.length * c) + ca
 }
